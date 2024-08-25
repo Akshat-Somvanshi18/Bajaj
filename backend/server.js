@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 2000;
 
 const app = express();
 app.use(cors({
-  origin: ["https://bajaj-kappa-gilt.vercel.app/"],
+  origin: ["https://bajaj-kappa-gilt.vercel.app"],
   methods: ["GET","POST"],
   credentials: true
 }));
