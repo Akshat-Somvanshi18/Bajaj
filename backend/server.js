@@ -5,7 +5,11 @@ require('dotenv').config();
 const PORT = process.env.PORT || 2000;
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ["https://bajaj-kappa-gilt.vercel.app/"],
+  methods: ["GET","POST"],
+  credentials: true
+}));
 app.use(express.json());
 
 const userId = "Akshat_S_Somvanshi"; // Replace with dynamic user data if needed
