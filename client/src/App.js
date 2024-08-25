@@ -1,6 +1,7 @@
 // frontend/src/App.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import "./App.css"
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
       setApiResponse(response.data);
       setInputError('');
     } catch (error) {
-      setInputError('Invalid JSON input.');
+      setInputError(error+"");
     }
   };
 
@@ -45,11 +46,8 @@ function App() {
   
     const { numbers, alphabets, highest_lowercase_alphabet } = apiResponse;
     let filteredContent = "Filtered Content";
-  
-    // Initialize an array to hold formatted parts of the output
     const formattedParts = [];
   
-    // Check selected filters and push formatted data
     if (filtersSelected.includes("Numbers") && numbers) {
       formattedParts.push(`Numbers: ${numbers.join(", ")}`);
     }
@@ -67,7 +65,6 @@ function App() {
       );
     }
   
-    // Combine the formatted parts into a single string
     if (formattedParts.length > 0) {
       filteredContent += `\n${formattedParts.join("\n")}`;
     } else {
