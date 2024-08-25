@@ -20,7 +20,7 @@ function App() {
 
       const parsedPayload = JSON.parse(jsonInputText);
       if (!parsedPayload.data) throw new Error('Invalid input.');
-      const response = await axios.post('http://localhost:2000/bfhl', parsedPayload); // Update URL with your deployed backend URL
+      const response = await axios.post('https://backend-iota-bay.vercel.app/bfhl', parsedPayload); 
       setApiResponse(response.data);
       setInputError('');
     } catch (error) {

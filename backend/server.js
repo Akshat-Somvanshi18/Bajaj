@@ -12,9 +12,9 @@ app.use(cors({
 }));
 app.use(express.json());
 
-const userId = "Akshat_S_Somvanshi"; // Replace with dynamic user data if needed
-const email = "akshatsomvanshi18@gmail.com"; // Replace with dynamic user data if needed
-const rollNumber = "21BIT0004"; // Replace with dynamic user data if needed
+const userId = "Akshat_S_Somvanshi"; 
+const email = "akshatsomvanshi18@gmail.com"; 
+const rollNumber = "21BIT0004"; 
 
 app.post('/bfhl', (req, res) => {
   const data = req.body.data || [];
